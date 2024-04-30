@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>ブラックジャックへようこそ！</h1>
+    <div id="gameArea">
+        <div id="dealerHand">ディーラーの手: <span id="dealerCards"></span></div>
+        <div id="playerHand">プレイヤーの手: <span id="playerCards"></span></div>
+        <button onclick="startGame()">ゲーム開始</button>
+        <button onclick="hit()">ヒット</button>
+        <button onclick="stand()">スタンド</button>
+        <div id="gameResult"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
